@@ -1,2 +1,4 @@
 res://scenes/world.tscn
 res://scenes/plain_tile.tres
+res://scenes/player.tscn
+res://scenes/tutorial_world.tscn
