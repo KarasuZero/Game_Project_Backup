@@ -1,5 +1,6 @@
-TileMapLayer
+NavigationAgent2D
 Camera2D
+TileMapLayer
 TileMap
 TileMapDual
 CollisionShape2D

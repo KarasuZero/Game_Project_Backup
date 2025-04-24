@@ -420,10 +420,24 @@ radius = 5.0
 script = ExtResource("1_ykdpd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_07vnq")
 animation = &"idle_side"
 frame_progress = 0.58796
+offset = Vector2(0, -10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 12)
+position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_5i88t")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 1.0
+target_desired_distance = 1.0
+path_postprocessing = 1
+avoidance_enabled = true
+debug_path_custom_color = Color(0.968017, 0.442069, 0.263901, 1)
+
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]
